@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.whack.janson.mindfulmatters.QuizActivity">
+
+    <TextView
+        android:id="@+id/screen_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/screen_title"
+        android:layout_margin="10dp"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/title_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_1_screen"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginStart="53dp"
+        android:layout_alignBaseline="@+id/title_2"
+        android:layout_alignBottom="@+id/title_2"
+        android:layout_alignStart="@+id/screen_title" />
+
+    <TextView
+        android:id="@+id/title_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_2_screen"
+        android:layout_margin="10dp"
+        android:textSize="14sp"
+        android:layout_below="@id/screen_title"
+        android:layout_toEndOf="@id/title_1"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/title_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_3_screen"
+        android:layout_margin="10dp"
+        android:textSize="14sp"
+        android:layout_below="@id/screen_title"
+        android:layout_toEndOf="@id/title_2"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/title_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_4_screen"
+        android:layout_margin="10dp"
+        android:textSize="14sp"
+        android:layout_below="@id/screen_title"
+        android:layout_toEndOf="@id/title_3"
+        android:gravity="center"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/quiz"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_1"/>
+</RelativeLayout>

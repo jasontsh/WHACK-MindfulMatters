@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MindfulMatters</string>
+    <string name="title">Mindful Matters</string>
+    <string name="quiz_name">Start Quiz</string>
+    <string name="title_1_screen">1\nNot at\nall</string>
+    <string name="title_2_screen">2\nSeveral\ndays</string>
+    <string name="title_3_screen">3\nMore than\nhalf the days</string>
+    <string name="title_4_screen">4\nNearly\nevery day</string>
+    <string name="screen_title">Over the last 2 weeks, how often have you been bothered by any of the following problems?</string>
+</resources>
