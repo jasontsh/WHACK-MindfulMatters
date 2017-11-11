@@ -1,6 +1,7 @@
 package com.whack.janson.mindfulmatters;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -68,6 +69,9 @@ public class ScreenQuizActivity extends AppCompatActivity {
         }
         ed.putInt("basic_score", score);
         ed.apply();
+        if (score > 14) {
+            startActivity(new Intent(this, ResourceActivity.class));
+        }
         finish();
     }
 }

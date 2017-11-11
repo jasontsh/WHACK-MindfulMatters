@@ -1,5 +1,6 @@
 package com.whack.janson.mindfulmatters;
 
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
@@ -7,26 +8,30 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.widget.Toast;
 
-public class HistoryActivity extends AppCompatActivity {
+/**
+ * Created by MLH-Admin on 11/11/2017.
+ */
 
-    private final String[] titles = new String[]{"Mood", "Sleep", "Activity", "Nutrition"};
+public class ResourceActivity extends AppCompatActivity {
 
     protected class TabAdapter extends FragmentStatePagerAdapter {
-        HistoryFragment[] fragments;
-
+        ResourceFragment[] fragments;
         public TabAdapter(FragmentManager fm) {
             super(fm);
-            fragments = new HistoryFragment[4];
-            for (int i = 0; i < titles.length; i++) {
-                HistoryFragment frag = new HistoryFragment();
-                Bundle bundle = new Bundle();
-                bundle.putString("title", titles[i]);
-                frag.setArguments(bundle);
-                fragments[i] = frag;
-            }
+            fragments = new ResourceFragment[2];
+
+            ResourceFragment frag = new ResourceFragment();
+            Bundle bundle = new Bundle();
+            bundle.putInt("number", 0);
+            frag.setArguments(bundle);
+            fragments[0] = frag;
+
+            ResourceFragment frag2 = new ResourceFragment();
+            Bundle bundle2 = new Bundle();
+            bundle.putInt("number", 1);
+            frag2.setArguments(bundle2);
+            fragments[1] = frag2;
         }
 
         @Override
@@ -36,10 +41,9 @@ public class HistoryActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            return titles.length;
+            return 2;
         }
     }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,13 +71,16 @@ public class HistoryActivity extends AppCompatActivity {
 
             }
         };
-        for (int i = 0; i < titles.length; i++) {
-            actionBar.addTab(
-                    actionBar.newTab()
-                        .setText(titles[i])
+        actionBar.addTab(
+                actionBar.newTab()
+                        .setText("Lifestyle")
                         .setTabListener(tabListener)
-            );
-        }
+        );
+        actionBar.addTab(
+                actionBar.newTab()
+                        .setText("Online Resources")
+                        .setTabListener(tabListener)
+        );
 
         viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override

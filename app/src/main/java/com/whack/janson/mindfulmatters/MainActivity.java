@@ -28,5 +28,19 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        findViewById(R.id.history).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(context, HistoryActivity.class));
+            }
+        });
+
+        findViewById(R.id.resources).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(context, ResourceActivity.class));
+            }
+        });
     }
 }

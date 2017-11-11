@@ -1,11 +1,19 @@
 package com.whack.janson.mindfulmatters;
 
 import android.app.Activity;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RadioGroup;
 import android.widget.Toast;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 public class DailyActivity extends AppCompatActivity {
 
@@ -80,14 +88,47 @@ public class DailyActivity extends AppCompatActivity {
         findViewById(R.id.submit).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                int score = 0;
                 for (Integer i : choices) {
                     if (i == 0) {
                         Toast.makeText(activity, "You haven't finished the quiz!", Toast.LENGTH_SHORT).show();
                         return;
                     }
+                    score += i;
                 }
-
+                SharedPreferences sp = getSharedPreferences("default", MODE_PRIVATE);
+                SharedPreferences.Editor ed = sp.edit();
+                String timeStamp = new SimpleDateFormat("yyyyMMdd", Locale.getDefault()).format(new Date());
+                String prevTime = sp.getString("latest", "");
+                int count = sp.getInt("count", -1);
+                int indexToChange = count + (prevTime.equals(timeStamp) ? 0 : 1);
+                ed.putInt("count", indexToChange);
+                ed.putString("latest", timeStamp);
+                ed.putInt("Mood_" + indexToChange, choices[0]);
+                ed.putInt("Activity_" + indexToChange, choices[1]);
+                ed.putInt("Sleep_" + indexToChange, choices[2]);
+                ed.putInt("Nutrition_" + indexToChange, choices[3]);
+                ed.apply();
+                finish();
+                if (score <= 4) {
+                    startActivity(new Intent(activity, ResourceActivity.class));
+                }
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Are you sure you want to quit?")
+                .setMessage("If yes, no results are going to be saved in this quiz")
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish();
+                    }
+                })
+                .setNegativeButton("No", null);
+        builder.create().show();
     }
 }

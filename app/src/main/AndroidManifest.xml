@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".ScreenQuizActivity" />
         <activity android:name=".HistoryActivity" />
-        <activity android:name=".DailyActivity"></activity>
+        <activity android:name=".DailyActivity"/>
+        <activity android:name=".ResourceActivity"/>
     </application>
 
 </manifest>
