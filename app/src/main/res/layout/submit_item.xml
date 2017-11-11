@@ -9,6 +9,8 @@
         android:layout_centerHorizontal="true"
         android:layout_margin="10dp"
         android:textSize="24sp"
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/white"
         android:text="@string/submit"/>
 
     </RelativeLayout>

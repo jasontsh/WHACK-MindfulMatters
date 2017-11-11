@@ -24,6 +24,7 @@ public class DailyActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_daily);
+        setTitle("Daily Quiz");
         choices = new int[4];
         ((RadioGroup) findViewById(R.id.quiz_rg1)).setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override

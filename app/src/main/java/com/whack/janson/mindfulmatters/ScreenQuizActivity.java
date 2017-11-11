@@ -19,6 +19,7 @@ public class ScreenQuizActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
+        setTitle("Quiz");
         questions = new ArrayList<>();
         questions.add(new Question("Little interest or pleasure in doing things?"));
         questions.add(new Question("Feeling down, depressed, or hopeless?"));
@@ -71,6 +72,8 @@ public class ScreenQuizActivity extends AppCompatActivity {
         ed.apply();
         if (score > 14) {
             startActivity(new Intent(this, ResourceActivity.class));
+        } else {
+            startActivity(new Intent(this, DailyActivity.class));
         }
         finish();
     }

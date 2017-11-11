@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">MindfulMatters</string>
-    <string name="title">Mindful Matters</string>
-    <string name="quiz_name">Start Quiz</string>
+    <string name="app_name">Mindful Matters</string>
+    <string name="title">mindful matters;</string>
+    <string name="quiz_name">START QUIZ</string>
     <string name="title_1_screen">1\nNot at\nall</string>
     <string name="title_2_screen">2\nSeveral\ndays</string>
     <string name="title_3_screen">3\nMore than\nhalf the days</string>
@@ -28,8 +28,8 @@
     <string name="q4_2">3&#8211;5 servings</string>
     <string name="q4_3">6&#8211;8 servings</string>
     <string name="q4_4">9+ servings</string>
-    <string name="history">History</string>
-    <string name="resources">Resources</string>
+    <string name="history">HISTORY</string>
+    <string name="resources">RESOURCES</string>
     <string name="lifestyle">1. Get sleep\n
     Go to bed at the same time each day, turn off the screens a bit earlier than normal, and look into light therapy if your work schedule means you don’t get much sunlight.\n
     2. Be active\n

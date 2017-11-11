@@ -44,7 +44,7 @@ public class HistoryActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history);
-
+        setTitle("History");
         final ViewPager viewPager = (ViewPager) findViewById(R.id.history_vp);
         viewPager.setAdapter(new TabAdapter(getSupportFragmentManager()));
 

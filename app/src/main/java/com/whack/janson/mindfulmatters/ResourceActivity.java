@@ -48,7 +48,7 @@ public class ResourceActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history);
-
+        setTitle("Resources");
         final ViewPager viewPager = (ViewPager) findViewById(R.id.history_vp);
         viewPager.setAdapter(new TabAdapter(getSupportFragmentManager()));
 

@@ -11,6 +11,7 @@
         tools:text="How do you feel today?"
         android:textSize="24sp"
         android:layout_margin="16dp"
+        android:textColor="@color/colorPrimary"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="7dp"/>
