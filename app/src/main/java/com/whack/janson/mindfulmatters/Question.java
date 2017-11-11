@@ -10,6 +10,7 @@ public class Question {
 
     public Question(String question) {
         this.question = question;
+        score = -1;
     }
 
     public void setScore(int score) {

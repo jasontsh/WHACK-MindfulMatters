@@ -7,4 +7,5 @@
     <string name="title_3_screen">3\nMore than\nhalf the days</string>
     <string name="title_4_screen">4\nNearly\nevery day</string>
     <string name="screen_title">Over the last 2 weeks, how often have you been bothered by any of the following problems?</string>
+    <string name="submit">Submit</string>
 </resources>
