@@ -16,7 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ScreenQuizActivity"></activity>
+        <activity android:name=".ScreenQuizActivity" />
+        <activity android:name=".HistoryActivity" />
+        <activity android:name=".DailyActivity"></activity>
     </application>
 
 </manifest>
