@@ -3,6 +3,7 @@ package com.whack.janson.mindfulmatters;
 import android.support.annotation.IdRes;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RadioGroup;
@@ -54,11 +55,22 @@ public class QuizAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             return;
         }
         final Question question = questions.get(position);
-        QuizViewHolder quizViewHolder = (QuizViewHolder) holder;
+        final QuizViewHolder quizViewHolder = (QuizViewHolder) holder;
         quizViewHolder.question.setText(question.getQuestion());
+        quizViewHolder.rg.clearCheck();
+        if(question.getScore() != -1) {
+            quizViewHolder.rg.check(question.getScore() == 0 ? R.id.rg1 :
+                                    question.getScore() == 1 ? R.id.rg2 :
+                                    question.getScore() == 2 ? R.id.rg3 : R.id.rg4);
+        }
+        quizViewHolder.rg.setTag(position);
         quizViewHolder.rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, @IdRes int checkedId) {
+                Question question1 =  questions.get((int) group.getTag());
+                if (!question.equals(question1)) {
+                    return;
+                }
                 switch(checkedId) {
                     case R.id.rg2:
                         question.setScore(1); break;
@@ -68,8 +80,6 @@ public class QuizAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                         question.setScore(3); break;
                     case R.id.rg1:
                         question.setScore(0); break;
-                    default:
-                        question.setScore(-1); break;
                 }
             }
         });

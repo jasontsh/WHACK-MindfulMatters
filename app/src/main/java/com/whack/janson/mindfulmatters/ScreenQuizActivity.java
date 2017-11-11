@@ -31,7 +31,15 @@ public class ScreenQuizActivity extends AppCompatActivity {
         questions.add(new Question("Thoughts that you would be better off dead, or of hurting yourself in some way?"));
         QuizAdapter adapter = new QuizAdapter(questions, this);
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.quiz);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setLayoutManager(new LinearLayoutManager(this){
+            @Override
+            public int scrollVerticallyBy(int dy, RecyclerView.Recycler recycler, RecyclerView.State state) {
+                if (dy < 0) {
+                    return 0;
+                }
+                return super.scrollVerticallyBy(dy, recycler, state);
+            }
+        });
         recyclerView.setAdapter(adapter);
     }
 

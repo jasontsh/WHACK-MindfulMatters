@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
                 if (score == -1) {
                     startActivity(new Intent(context, ScreenQuizActivity.class));
                 } else {
-
+                    startActivity(new Intent(context, DailyActivity.class));
                 }
             }
         });

@@ -8,4 +8,24 @@
     <string name="title_4_screen">4\nNearly\nevery day</string>
     <string name="screen_title">Over the last 2 weeks, how often have you been bothered by any of the following problems?</string>
     <string name="submit">Submit</string>
+    <string name="daily_question1">How are you feeling today?</string>
+    <string name="daily_question2">How much physical activity did you do today?</string>
+    <string name="daily_question3">How much sleep did you get last night?</string>
+    <string name="daily_question4">How many servings of fruits and vegetables did you eat today?</string>
+    <string name="q1_1">Very sad</string>
+    <string name="q1_2">Slightly sad</string>
+    <string name="q1_3">Slightly happy</string>
+    <string name="q1_4">Very happy</string>
+    <string name="q2_1">0&#8211;30 min</string>
+    <string name="q2_2">30&#8211;60 min</string>
+    <string name="q2_3">60&#8211;90 min</string>
+    <string name="q2_4">90+ min</string>
+    <string name="q3_1">0&#8211;3 hours</string>
+    <string name="q3_2">4&#8211;5 hours</string>
+    <string name="q3_3">6&#8211;8 hours</string>
+    <string name="q3_4">9+ hours</string>
+    <string name="q4_1">0&#8211;2 servings</string>
+    <string name="q4_2">3&#8211;5 servings</string>
+    <string name="q4_3">6&#8211;8 servings</string>
+    <string name="q4_4">9+ servings</string>
 </resources>
