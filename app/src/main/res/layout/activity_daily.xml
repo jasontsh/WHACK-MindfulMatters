@@ -64,8 +64,12 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:text="@string/daily_question2"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
             android:textSize="24sp"
-            android:layout_margin="10dp"
             android:textColor="@color/colorPrimary"
             android:layout_below="@id/quiz_rg1"/>
 
@@ -118,7 +122,11 @@
             android:textSize="24sp"
             android:textColor="@color/colorPrimary"
             android:layout_below="@id/quiz_rg2"
-            android:layout_margin="10dp"/>
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"/>
         <RadioGroup
             android:id="@+id/quiz_rg3"
             android:layout_width="match_parent"
@@ -167,7 +175,11 @@
             android:textColor="@color/colorPrimary"
             android:text="@string/daily_question4"
             android:textSize="24sp"
-            android:layout_margin="10dp"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
             android:layout_below="@id/quiz_rg3"/>
 
         <RadioGroup
